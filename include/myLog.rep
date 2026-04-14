@@ -1,0 +1,14 @@
+﻿class myLog
+{
+    PROP(int heartBeatInterval = 50);   // 心跳间隔 ms
+    PROP(bool isWriteToFile = false);   // 写入文件
+    PROP(int maxLogCount = 2000);       // 最大显示实时日志数
+    PROP(int maxFileSize = 30);         // 日志文件的size MB
+    PROP(QString logDir)                // 文件写入的路径
+
+    // 信号：Host 触发，所有 Replica 自动收到
+    SIGNAL(logChanged(const QString &data));
+    SIGNAL(heartToClient(qint64 time));
+
+    SLOT(void exitServer());
+};
