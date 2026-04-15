@@ -17,16 +17,16 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 CONFIG(debug, debug|release) {
     DESTDIR     = $$PWD/../bin/debug
-    OBJECTS_DIR = $$PWD/../build/debug/$$TARGET/obj
-    MOC_DIR     = $$PWD/../build/debug/$$TARGET/moc
-    UI_DIR      = $$PWD/../build/debug/$$TARGET/ui
-    RCC_DIR     = $$PWD/../build/debug/$$TARGET/rcc
+    OBJECTS_DIR = $$PWD/../build/$$TARGET/debug/obj
+    MOC_DIR     = $$PWD/../build/$$TARGET/debug/moc
+    UI_DIR      = $$PWD/../build/$$TARGET/debug/ui
+    RCC_DIR     = $$PWD/../build/$$TARGET/debug/rcc
 } else {
     DESTDIR     = $$PWD/../bin/release
-    OBJECTS_DIR = $$PWD/../build/release/$$TARGET/obj
-    MOC_DIR     = $$PWD/../build/release/$$TARGET/moc
-    UI_DIR      = $$PWD/../build/release/$$TARGET/ui
-    RCC_DIR     = $$PWD/../build/release/$$TARGET/rcc
+    OBJECTS_DIR = $$PWD/../build/$$TARGET/release/obj
+    MOC_DIR     = $$PWD/../build/$$TARGET/release/moc
+    UI_DIR      = $$PWD/../build/$$TARGET/release/ui
+    RCC_DIR     = $$PWD/../build/$$TARGET/release/rcc
 }
 
 SOURCES += \
